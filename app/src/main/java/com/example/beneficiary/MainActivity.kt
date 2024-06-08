@@ -10,6 +10,8 @@ import androidx.compose.ui.Modifier
 import com.example.beneficiary.ui.theme.BeneficiaryTheme
 
 class MainActivity : ComponentActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -19,7 +21,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                   //
+
                 }
             }
         }
