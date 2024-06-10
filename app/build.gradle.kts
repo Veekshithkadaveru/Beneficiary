@@ -63,6 +63,8 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.1")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation( "androidx.compose.runtime:runtime-livedata:1.6.7")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.1")
     implementation(libs.firebase.crashlytics.buildtools)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

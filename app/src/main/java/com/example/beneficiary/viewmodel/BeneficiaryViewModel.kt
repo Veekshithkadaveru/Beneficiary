@@ -1,5 +1,6 @@
 package com.example.beneficiary.viewmodel
 
+
 import BeneficiaryRepository
 import android.content.Context
 import androidx.lifecycle.LiveData
@@ -16,15 +17,20 @@ class BeneficiaryViewModel(private val repository: BeneficiaryRepository) : View
     private val _selectedBeneficiary = MutableLiveData<Beneficiary?>()
     val selectedBeneficiary: LiveData<Beneficiary?> get() = _selectedBeneficiary
 
+   /* init {
+        _beneficiaries.value = mutableListOf()  // Initialize with an empty list
+    }
+*/
+
     fun loadBeneficiaries(context: Context) {
 
         viewModelScope.launch(Dispatchers.IO) {
-            val loadedBeneficiaries = repository.loadBeneficiaries()
+            val loadedBeneficiaries = repository.loadBeneficiaries().toMutableList()
             _beneficiaries.postValue(loadedBeneficiaries)
         }
     }
 
-    fun selectedBeneficiary(beneficiary: Beneficiary) {
+    fun selectedBeneficiary(beneficiary: Beneficiary?) {
         _selectedBeneficiary.value = beneficiary
     }
 }

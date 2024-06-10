@@ -7,7 +7,7 @@ import com.example.beneficiary.repository.parseBeneficiaries
 class BeneficiaryRepository(private val context: Context) {
 
     fun loadBeneficiaries(): List<Beneficiary> {
-        val jsonString = loadJSONFromAsset(context, "beneficiaries.json")
+        val jsonString = loadJSONFromAsset(context, "Beneficiaries.json")
         return jsonString?.let { parseBeneficiaries(it) } ?: emptyList()
     }
 }
